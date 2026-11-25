@@ -407,3 +407,8 @@ jobs:
         asset_name: 'UnofficialCommanderWars_Win7CompatiblePack.zip'
         asset_path: '${{github.workspace}}/source/3rd_party/unofficialWin7Support/UnofficialCommanderWars_Win7CompatiblePack.zip'
         asset_content_type: application/zip
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: Commander_Wars_APK
+        path: build/Android/**/*.apk
